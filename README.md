@@ -1,0 +1,2 @@
+#Preriquisites
+Pygame
