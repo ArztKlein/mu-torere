@@ -30,8 +30,6 @@ class Game:
         self.scale = 3
         self.transition = False
 
-        self.watch = False
-
         self.nodes = []
         self.moving_counters = []
         self.game_running = False
@@ -44,8 +42,7 @@ class Game:
         self.transition_speed = self.config["sections"]["animation_speeds"]["transition_speed"]
 
         self.bg = self.config["sections"]["colours"]["background"]
-        self.replay_button = Button(100, self.HEIGHT - 100, 150, 80, "Retry", self.restart, self.app, bg=self.bg)
-        self.watch_button = Button(300, self.HEIGHT - 100, 150, 80, "Replay", self.watch_replay, self.app, bg=self.bg)
+        self.replay_button = Button(self.WIDTH - 300, self.HEIGHT - 100, 150, 80, "Retry", self.restart, self.app, bg=self.bg)
 
         self.create_counters()
         
@@ -98,11 +95,6 @@ class Game:
         elif(self.game_finished):
             self.canvas.create_text(self.WIDTH/2, 30, fill="black", font="Times 40 italic bold", text=f"{'White' if self.player == 1 else 'Black'} wins!")
             self.replay_button.draw()
-            self.watch_button.draw()
-    
-    def watch_replay(self):
-        print("Watching Replay")
-
 
     def restart(self):
         self.setup()
