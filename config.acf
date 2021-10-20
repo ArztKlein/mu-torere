@@ -1,0 +1,14 @@
+@colours
+playerone = white
+playertwo = black
+empty = #515151
+highlight = yellow
+outline = black
+background = white
+@animation_speeds
+speed = 20
+counter_speed = 10
+@sizes
+outer_radius = 70
+center_radius = 100
+outer_distance = 150
