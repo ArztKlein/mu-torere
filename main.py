@@ -20,11 +20,11 @@ def test_config(config):
     #Test whether the speeds are valid (more than 0)
     for speed in config["sections"]["animation_speeds"]:
         if(0 > config["sections"]["animation_speeds"][speed]):
-            raise Exception(f"Animation Speed '{speed}' must be above 0.")
+            raise Exception(f"Animation Speed '{speed}' must be above 0. Please check the config.acf file.")
     #Test whether the sizes are valid (more than 0)
     for size in config["sections"]["sizes"]:
         if(0 > config["sections"]["sizes"][size]):
-            raise Exception(f"Size '{size}' must be above 0.")
+            raise Exception(f"Size '{size}' must be above 0. Please check the config.acf file.")
 
 def draw():
     app.update()
