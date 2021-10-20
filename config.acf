@@ -1,3 +1,6 @@
+@app
+width = 500
+height = 500
 @colours
 playerone = white
 playertwo = black
@@ -6,7 +9,7 @@ highlight = yellow
 outline = black
 background = white
 @animation_speeds
-speed = 20
+transition_speed = 20
 counter_speed = 10
 @sizes
 outer_radius = 70
